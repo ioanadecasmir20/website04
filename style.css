@@ -216,23 +216,50 @@ h2 {
   color: #444;
 }
 
-form input,
-form textarea {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 1rem;
+.contact-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
 }
 
-button {
-  background-color: #001970;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+.contact-section li {
+  margin-bottom: 10px;
   font-size: 1rem;
-  border-radius: 4px;
+  color: #333;
+}
+
+.contact-section a {
+  color: #001970;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1 1 50%;
+}
+
+.contact-map {
+  flex: 1 1 45%;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-map iframe {
+    height: 200px;
+  }
 }
 
 footer {

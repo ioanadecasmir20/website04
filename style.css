@@ -14,27 +14,53 @@ body {
 }
 
 header {
-  background-color: #001970;
+  background-color: #000b74; /* matching the logo bg */
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
-  height: 60px;
+  height: 50px;
+  max-width: 180px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
-  gap: 20px;
-  justify-content: flex-end;
+  gap: 25px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
 }
 
 #hero {

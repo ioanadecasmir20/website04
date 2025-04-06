@@ -178,6 +178,44 @@ h2 {
   transform: translateY(0);
 }
 
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background-color: #f7f9fc;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #001970;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #001970;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
 form input,
 form textarea {
   display: block;

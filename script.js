@@ -26,3 +26,15 @@ if (slides.length) {
   slides[current].classList.add('active'); // in case HTML didn't do it by default
   setInterval(showNextSlide, 4000); // 4-second loop
 }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section').forEach(section => {
+  observer.observe(section);
+});
